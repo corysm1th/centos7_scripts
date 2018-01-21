@@ -13,3 +13,6 @@ Example:
 - Docker bridge network: 10.0.0.0/24
 - Add this route to your network: ip route add 10.0.0.0/24 via 192.168.0.10
 - Container configuration: docker run --net docker1 --ip 10.0.0.10
+
+## To invoke from curl
+`curl https://raw.githubusercontent.com/corysm1th/centos7_scripts/master/docker/standalone_network.sh | sh -s SUBNET_CIDR`
