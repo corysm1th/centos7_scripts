@@ -1,6 +1,10 @@
 # docker_install.sh
 Installs docker community edition on Centos 7, using Docker's repo
 
+```sh
+curl https://raw.githubusercontent.com/corysm1th/centos7_scripts/master/docker/docker_install.sh | sh
+```
+
 # standalone_network.sh
 Creates a bridge network called docker1, and enables packet forwarding in the kernel.
 
