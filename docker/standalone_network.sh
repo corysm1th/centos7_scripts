@@ -1,5 +1,5 @@
 #!/bin/sh
-if [ -z "$1"]; then
+if [ -z "$1" ]; then
     echo "Usage: standalone_network.sh SUBNET_CIDR"
     exit 1
 fi

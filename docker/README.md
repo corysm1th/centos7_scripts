@@ -15,4 +15,6 @@ Example:
 - Container configuration: docker run --net docker1 --ip 10.0.0.10
 
 ## To invoke from curl
-`curl https://raw.githubusercontent.com/corysm1th/centos7_scripts/master/docker/standalone_network.sh | sh -s SUBNET_CIDR`
+```sh
+curl https://raw.githubusercontent.com/corysm1th/centos7_scripts/master/docker/standalone_network.sh | sh -s SUBNET_CIDR
+```
