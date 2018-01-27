@@ -20,5 +20,5 @@ Example:
 
 ## To invoke from curl
 ```sh
-curl https://raw.githubusercontent.com/corysm1th/centos7_scripts/master/docker/standalone_network.sh | sh -s SUBNET_CIDR
+curl https://raw.githubusercontent.com/corysm1th/centos7_scripts/master/docker/standalone_network.sh | sh -s SUBNET_CIDR NETWORK_NAME
 ```
