@@ -4,5 +4,6 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
+yum install -y epel-release
 yum install -y certbot
 certbot register --non-interactive --agree-tos -m $1
