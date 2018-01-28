@@ -1,5 +1,5 @@
 #!/bin/sh
-if [ -z "$1"]; then
+if [ -z "$1" ]; then
     echo "Usage: letsencrypt.sh EMAIL_ADDRESS"
     exit 1
 fi
