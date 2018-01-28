@@ -8,5 +8,5 @@ curl https://raw.githubusercontent.com/corysm1th/centos7_scripts/master/letsencr
 
 Make sure the certbot server is publicly accessible over port 80, and run:
 ```sh
-certbot certonly --standalone --prefered-challenges http -d FQDN
+certbot certonly --standalone --preferred-challenges http -d FQDN
 ```
