@@ -3,5 +3,5 @@ Installs certbot and registers an account with letsencrypt.
 
 ## Usage:
 ```sh
-wget https://raw.githubusercontent.com/corysm1th/centos7_scripts/master/letsencrypt/letsencrypt.sh | sh -s EMAIL_ADDRESS
+curl https://raw.githubusercontent.com/corysm1th/centos7_scripts/master/letsencrypt/letsencrypt.sh | sh -s EMAIL_ADDRESS
 ```
