@@ -25,7 +25,7 @@ mkdir -p /data/gitlab/{config,logs,data}
 
 docker run -d --net "$1" --ip "$2" \
     --name "$3" \
-    --env GITLAB_OMNIBUS_CONFIG="external_url \"https://"${URL}"\";" \
+    --env GITLAB_OMNIBUS_CONFIG="external_url \"https://"${3}"\";" \
     --name gitlab \
     --restart always \
     --volume /data/gitlab/config:/etc/gitlab:Z \
