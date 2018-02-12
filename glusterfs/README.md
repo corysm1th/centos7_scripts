@@ -30,6 +30,14 @@ gluster volume start gvol1
 gluster volume set gvol1 auth.allow 10.0.0.*
 gluster volume set gvol1 nfs.disable off
 gluster volume set gvol1 nfs.export-volumes on
+
+# Further performance
+gluster volume set gvol1 performance.cache-size 1GB
+gluster volume set gvol1 performance.io-thread-count 4
+gluster volume set gvol1 performance.write-behind-window-size 8MB
+gluster volume set gvol1 performance.readdir-ahead on
+gluster volume set gvol1 client.event-threads 2
+gluster volume set gvol1 server.event-threads 2
 ```
 
 Where 10.0.0.* is the address range where your clients will be connecting from.
@@ -46,10 +54,6 @@ gluster volume create gvol1 stripe 3 transport tcp \
     server{1..12}:/bricks/brick
 gluster volume start gvol1
 
-# NFS performs better than FUSE
-gluster volume set gvol1 auth.allow 10.0.0.*
-gluster volume set gvol1 nfs.disable off
-gluster volume set gvol1 nfs.export-volumes on
 ```
 
 ## Mounting the Volume
