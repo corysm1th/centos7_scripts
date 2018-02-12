@@ -14,7 +14,7 @@ GitLab will look for your certificates at `/data/gitlab/ssl/`, with the names `F
 GitLab URL: https://git.yourdomain.com
 GitLab FQDN: git.yourdomain.com
 Certificate Name: /data/gitlab/ssl/git.yourdomain.com.crt
-Private Key: /data/gitlab/ssl/git.yourdomain.key
+Private Key: /data/gitlab/ssl/git.yourdomain.com.key
 ```
 Note for clarity: Paths are on the Docker host, and volumed in to the container.
 
