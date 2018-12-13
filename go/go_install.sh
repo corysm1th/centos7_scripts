@@ -1,4 +1,5 @@
 #!/bin/sh
+set -ex
 GO_TGZ="go1.11.2.linux-amd64.tar.gz"
 wget "https://dl.google.com/go/${GO_TGZ}"
 sudo rm -rf /usr/local/go # remove existing version
