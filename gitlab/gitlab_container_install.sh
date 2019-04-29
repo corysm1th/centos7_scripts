@@ -23,9 +23,21 @@ iptables-save | awk '!COMMIT||!x[$0]++' | iptables-restore
 
 mkdir -p /data/gitlab/{config,logs,data}
 
+# GitLab Omnibus Config
+GOC="external_url \"https://"${3}"\"; \
+postgresql['shared_buffers'] = '1MB'; \
+postgresql['autovacuum_max_workers'] = \"2\"; \
+prometheus_monitoring['enable'] = false; \
+unicorn['worker_timeout'] = 60; \
+unicorn['worker_processes'] = 2; \
+sidekiq['shutdown_timeout'] = 4; \
+sidekiq['concurrency'] = 4; \
+nginx['worker_processes'] = 2; \
+nginx['worker_connections'] = 2048;"
+
 docker run -d --net "$1" --ip "$2" \
     --name "$3" \
-    --env GITLAB_OMNIBUS_CONFIG="external_url \"https://"${3}"\";" \
+    --env GITLAB_OMNIBUS_CONFIG="${GOC}" \
     --restart always \
     --volume /data/gitlab/config:/etc/gitlab:Z \
     --volume /data/gitlab/logs:/var/log/gitlab:Z \
